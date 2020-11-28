@@ -8,51 +8,57 @@ class StatsServiceTest {
 
 
     @Test
-    void snouldCalculateSum(int[] months) {
+    void snouldCalculateSum() {
         StatsService service = new StatsService();
         int expected = 180;
+        int[] months;
         int actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 
     @Test
-    void snoulCalculateAverageSum(int[] months) {
+    void snoulCalculateAverageSum() {
         StatsService service = new StatsService();
         int expected = 15;
-        double actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
+        int[] months;
+        double actual = service.calculateAverageSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 
     @Test
-    void snoulCalculateMaxSum(int[] months) {
+    void snoulCalculateMaxSum() {
         StatsService service = new StatsService();
         int expected = 20;
-        int actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
+        int[] months;
+        int actual = service.calculateMaxSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 
     @Test
-    void snoulCalculateMaxMin(int[] months) {
+    void snoulCalculateMaxMin() {
         StatsService service = new StatsService();
         int expected = 7;
-        int actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
+        int[] months;
+        int actual = service.calculateMaxMin(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 
     @Test
-    void snoulCalculateAverageSumUnder(int[] months) {
+    void snoulCalculateAverageSumUnder() {
         StatsService service = new StatsService();
         int expected = 5;
-        int actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
+        int[] months;
+        int actual = service.calculateAverageSumUnder(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 
 
     @Test
-    void snoulCalculateAverageSumOver(int[] months) {
+    void snoulCalculateAverageSumOver() {
         StatsService service = new StatsService();
-        int expected = 7;
-        int actual = service.calculateSum(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
+        int expected = 5;
+        int[] months;
+        int actual = service.calculateAverageSumOver(months = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18});
         assertEquals(expected, actual);
     }
 }
