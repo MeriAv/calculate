@@ -1,6 +1,6 @@
 public class StatsService {
 
-    StatsService servise = new StatsService();
+
 
     public int calculateSum(int[] months) {
         int sum = 0;
@@ -12,7 +12,7 @@ public class StatsService {
 
     public double calculateAverageSum(int[] months) {
         double average = 0;
-
+        StatsService servise = new StatsService();
         int sum = servise.calculateSum(months);
         average = sum / 12;
         return average;
@@ -41,7 +41,7 @@ public class StatsService {
 
     public int calculateAverageSumUnder(int[] months) {
         int under = 0;
-        int sum = 0;
+       StatsService servise = new StatsService();
         double average = servise.calculateAverageSum(months);
         for ( int month : months ) {
             if (month < average) {
@@ -53,7 +53,7 @@ public class StatsService {
 
     public int calculateAverageSumOver(int[] months) {
         int over = 0;
-        int sum = 0;
+        StatsService servise = new StatsService();
         double average = servise.calculateAverageSum(months);
         for ( int month : months ) {
             if (month > average) {
